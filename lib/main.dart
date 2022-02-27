@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
+import 'review.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     String descriptionDummy =
         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem ";
+    String pathImage = "assets/img/people.jpg";
+    String name = "Varuna Yasas";
+    String details = "1 review 5 photos";
+    String comments = 'There is an amazing place in Sri Lanka';
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
@@ -22,7 +27,12 @@ class MyApp extends StatelessWidget {
           appBar: AppBar(
             title: Text("Hello world!"),
           ),
-          body: new DescriptionPlace("EEUU", 4, descriptionDummy),
+          body: Column(
+            children: <Widget>[
+              DescriptionPlace("EEUU", 4, descriptionDummy),
+              Review(pathImage, name, details, comments),
+            ],
+          ),
         ));
   }
 }

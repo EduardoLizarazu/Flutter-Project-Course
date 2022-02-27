@@ -12,9 +12,9 @@ class Review extends StatelessWidget {
     // TODO: implement build
 
     final userComment = Container(
-      margin: EdgeInsets.only(left: 20.0),
+      margin: const EdgeInsets.only(left: 20.0),
       child: Text(
-        details,
+        comments,
         textAlign: TextAlign.left,
         style: const TextStyle(
           fontFamily: 'Lato',
@@ -25,7 +25,7 @@ class Review extends StatelessWidget {
     );
 
     final userInfo = Container(
-      margin: EdgeInsets.only(left: 20.0),
+      margin: const EdgeInsets.only(left: 20.0),
       child: Text(
         details,
         textAlign: TextAlign.left,
@@ -38,18 +38,18 @@ class Review extends StatelessWidget {
     );
 
     final userName = Container(
-      margin: EdgeInsets.only(left: 20.0),
+      margin: const EdgeInsets.only(left: 20.0),
       child: Text(
         name,
         textAlign: TextAlign.left,
-        style: TextStyle(
+        style: const TextStyle(
           fontFamily: 'Lato',
           fontSize: 17.0,
         ),
       ),
     );
 
-    final usarDetails = Column(
+    final userDetails = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         // APILAMIENTO
@@ -72,7 +72,7 @@ class Review extends StatelessWidget {
       ),
     );
     return Row(
-      children: <Widget>[photo, userComment],
+      children: <Widget>[photo, userDetails],
     );
   }
 }
