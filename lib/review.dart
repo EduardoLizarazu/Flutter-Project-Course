@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'rating_stars.dart';
 
 class Review extends StatelessWidget {
   String pathImage = "assets/img/people.jpg";
   String name = "Varuna Yasas";
   String details = "1 review 5 photos";
   String comments = 'There is an amazing place in Sri Lanka';
-  Review(this.pathImage, this.name, this.details, this.comments);
+  double calif_number;
+  Review(this.pathImage, this.name, this.details, this.comments,
+      this.calif_number);
 
   @override
   Widget build(BuildContext context) {
@@ -24,17 +27,33 @@ class Review extends StatelessWidget {
       ),
     );
 
-    final userInfo = Container(
-      margin: const EdgeInsets.only(left: 20.0),
-      child: Text(
-        details,
-        textAlign: TextAlign.left,
-        style: const TextStyle(
-          fontFamily: 'Lato',
-          fontSize: 13.0,
-          color: Color(0xFFa3a5a7),
+    final userInfo = Row(
+      children: <Widget>[
+        Container(
+          margin: const EdgeInsets.only(left: 20.0),
+          child: Text(
+            details,
+            textAlign: TextAlign.left,
+            style: const TextStyle(
+              fontFamily: 'Lato',
+              fontSize: 13.0,
+              color: Color(0xFFa3a5a7),
+            ),
+          ),
         ),
-      ),
+        //Rating_Stars(5),
+        Container(
+          margin: const EdgeInsets.only(left: 10.0),
+          child: const Text(
+            'Rating_Stars(4.5)',
+            style: TextStyle(
+              fontFamily: 'Lato',
+              fontSize: 13.0,
+              color: Color(0xFFa3a5a7),
+            ),
+          ),
+        )
+      ],
     );
 
     final userName = Container(
