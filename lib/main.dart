@@ -14,29 +14,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String descriptionDummy =
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem ";
+        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem Sed ut perspiciatis unde omnis iste natus error sit voluptatem";
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-          body: Column(
-            children: <Widget>[
-              Stack(
-                children: <Widget>[
-                  ListView(
-                    children: <Widget>[
-                      DescriptionPlace("EEUU", 4.5, descriptionDummy),
-                      ReviewList()
-                    ],
-                  ),
-                  GradientBack()
-                ],
-              )
-            ],
-          ),
-        ));
+            body: Stack(
+          children: <Widget>[
+            ListView(
+              children: <Widget>[
+                DescriptionPlace("EEUU", 4.5, descriptionDummy),
+                ReviewList()
+              ],
+            ),
+            GradientBack()
+          ],
+        )));
   }
 }
 
