@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
-import 'review.dart';
+import 'review_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +14,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     String descriptionDummy =
         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem ";
-    String pathImage = "assets/img/people.jpg";
-    String name = "Varuna Yasas";
-    String details = "1 review 5 photos";
-    String comments = 'There is an amazing place in Sri Lanka';
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
@@ -29,8 +25,8 @@ class MyApp extends StatelessWidget {
           ),
           body: Column(
             children: <Widget>[
-              DescriptionPlace("EEUU", 4.5, descriptionDummy),
-              Review(pathImage, name, details, comments, 4.5),
+              //DescriptionPlace("EEUU", 4.5, descriptionDummy),
+              ReviewList()
             ],
           ),
         ));
