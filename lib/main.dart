@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           ),
           body: Column(
             children: <Widget>[
-              DescriptionPlace("EEUU", 4, descriptionDummy),
+              DescriptionPlace("EEUU", 4.5, descriptionDummy),
               Review(pathImage, name, details, comments),
             ],
           ),

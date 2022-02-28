@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'rating_stars.dart';
 
 class DescriptionPlace extends StatelessWidget {
   String namePlace;
-  int stars;
+  double stars;
   String descriptionPlace;
 
   DescriptionPlace(this.namePlace, this.stars, this.descriptionPlace);
@@ -10,33 +11,6 @@ class DescriptionPlace extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    final star_half = Container(
-        margin: const EdgeInsets.only(
-          top: 323.0,
-          right: 3.0,
-        ),
-        child: const Icon(
-          Icons.star_half,
-          color: Color(0xFFf2C611),
-        ));
-    final star_border = Container(
-        margin: const EdgeInsets.only(
-          top: 323.0,
-          right: 3.0,
-        ),
-        child: const Icon(
-          Icons.star_border,
-          color: Color(0xFFf2C611),
-        ));
-    final star = Container(
-        margin: const EdgeInsets.only(
-          top: 323.0,
-          right: 3.0,
-        ),
-        child: const Icon(
-          Icons.star,
-          color: Color(0xFFf2C611),
-        ));
 
     final description = Column(
       children: <Widget>[
@@ -80,15 +54,8 @@ class DescriptionPlace extends StatelessWidget {
             textAlign: TextAlign.left,
           ),
         ),
-        Row(
-          children: <Widget>[
-            star,
-            star,
-            star,
-            star,
-            star_border,
-          ],
-        )
+        // STARS
+        Rating_Stars(stars),
       ],
     );
     return Column(
