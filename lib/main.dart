@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'platzi_trips.dart';
+import 'platzi_trips_cupertino.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: PlatziTrips());
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      //PlatziTrips()
+      home: PlatziTripsCupertino(),
+    );
   }
 }
 
