@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'description_place.dart';
-import 'reviews/review_list.dart';
-//import 'gradient_back.dart';
-import 'header/header_appbar.dart';
+import 'platzi_trips.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,25 +11,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    String descriptionDummy =
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem Sed ut perspiciatis unde omnis iste natus error sit voluptatem";
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: Scaffold(
-            body: Stack(
-          children: <Widget>[
-            ListView(
-              children: <Widget>[
-                DescriptionPlace("EEUU", 4.5, descriptionDummy),
-                ReviewList()
-              ],
-            ),
-            HeaderAppBar()
-          ],
-        )));
+        home: PlatziTrips());
   }
 }
 
