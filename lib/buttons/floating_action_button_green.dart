@@ -9,7 +9,11 @@ class FloatingActionButtonGreen extends StatefulWidget {
 }
 
 class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen> {
-  void onPressedFav() {}
+  void onPressedFav() {
+    Scaffold.of(context)
+        .showSnackBar(SnackBar(content: Text("Added to Favorites")));
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

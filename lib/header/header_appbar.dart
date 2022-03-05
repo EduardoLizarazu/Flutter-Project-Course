@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'gradient_back.dart';
-import '../carrousel/card_image_list.dart';
+import 'carrousel/card_image_list.dart';
 
 class HeaderAppBar extends StatelessWidget {
   @override
