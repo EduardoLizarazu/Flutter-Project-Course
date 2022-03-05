@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'reviews/rating_stars.dart';
-import 'buttons/button_purple.dart';
+import '../buttons/button_purple.dart';
 
 class DescriptionPlace extends StatelessWidget {
   String namePlace;

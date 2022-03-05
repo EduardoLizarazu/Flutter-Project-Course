@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hello_world/reviews/review_list.dart';
+import 'reviews/review_list.dart';
 
 import 'description_place.dart';
 import 'header/header_appbar.dart';
